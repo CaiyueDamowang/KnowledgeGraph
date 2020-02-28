@@ -36,7 +36,7 @@
       />
       <text
         v-for="node in nodes"
-        :key="node.word"
+        :key="node.uuid + new Date()"
         :x="node.x"
         :y="node.y"
       >
@@ -44,7 +44,7 @@
       </text>
       <line
         v-for="path in ships"
-        :key="path.word"
+        :key="path.uuid"
         class="svg-line"
         :x1="path.source.x"
         :y1="path.source.y"
@@ -123,6 +123,18 @@ export default {
       this.initNodesMap(this.nodes)
       this.initShips(relationship)
     })()
+    // this.$loading({ target: '.dashboard-container' })
+    // this.checkThis()
+    // this.initSize()
+    // this.initNodes(getAllGraph, ships)
+    // this.initNodesMap(this.nodes)
+    // this.initShips(ships)
+
+    // getNodes().then(res => {
+    //   this.initNodes(res.data.nodes, ships)
+    //   this.initNodesMap(this.nodes)
+    // })
+    // this.cancelLoading
   },
 
   methods: {
