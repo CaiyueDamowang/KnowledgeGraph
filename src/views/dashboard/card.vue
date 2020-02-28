@@ -1,12 +1,21 @@
 <template>
-  <el-card class="box-card">
+  <el-card class="box-card" >
     <div slot="header" class="clearfix">
       <span>{{ card.word }}</span>
     </div>
-    <div class="text item">{{ 'Subject ' + card.subject }}</div>
-    <div class="text item">{{ 'Abstract ' + card.abstract }}</div>
-    <div class="text item">{{ 'interLink ' + card.interLink }}</div>
-
+    <div style="display: flex">
+      <div class="text-wp" style="display: inline-block">
+        <div class="text item"><strong>Subject : </strong>{{ card.subject }}</div>
+        <div class="text item"><strong>Abstract : </strong>{{ card.abstract }}</div>
+        <div class="text item"><strong>InterLink : </strong>{{ card.interLink }}</div>
+      </div>
+      <div class="text-wp" style="display: inline-block">
+        <div class="text item"><strong>Subject : </strong>{{ card.subject }}</div>
+        <div class="text item"><strong>Abstract : </strong>{{ card.abstract }}</div>
+        <div class="text item"><strong>InterLink : </strong>{{ card.interLink }}</div>
+      </div>
+    </div>
+    
   </el-card>
 </template>
 
@@ -25,7 +34,7 @@ export default {
 <style>
 .box-card {
   margin: 30px;
-  max-width: 500px;
+  max-width: 900px;
 }
 .box-card .item {
   margin: 30px;
