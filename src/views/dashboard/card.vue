@@ -4,8 +4,8 @@
       <span>{{ card.word }}</span>
     </div>
     <div class="text item"><strong>Infobox : </strong>{{ card.Infobox }}</div>
-    <div class="text item"><strong>Abstract : </strong>{{ card.abstract }}</div>
-    <div class="text item"><strong>Direcoty_Context : </strong>{{ card.Direcoty_Context }}</div>    
+    <div class="text item"><strong>Abstract : </strong>{{ card.Abstract }}</div>
+    <div class="text item"><strong>Direcoty_Context : </strong>{{ card.Directory_Context }}</div>
   </el-card>
 </template>
 
@@ -15,7 +15,10 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState({
-      card: state => state.knowledge.card
+      card: state => {
+        console.log(state.knowledge.card)
+        return state.knowledge.card
+      }
     })
   }
 }
