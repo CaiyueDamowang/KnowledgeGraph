@@ -3,19 +3,9 @@
     <div slot="header" class="clearfix">
       <span>{{ card.word }}</span>
     </div>
-    <div style="display: flex">
-      <div class="text-wp" style="display: inline-block">
-        <div class="text item"><strong>Subject : </strong>{{ card.subject }}</div>
-        <div class="text item"><strong>Abstract : </strong>{{ card.abstract }}</div>
-        <div class="text item"><strong>InterLink : </strong>{{ card.interLink }}</div>
-      </div>
-      <div class="text-wp" style="display: inline-block">
-        <div class="text item"><strong>Subject : </strong>{{ card.subject }}</div>
-        <div class="text item"><strong>Abstract : </strong>{{ card.abstract }}</div>
-        <div class="text item"><strong>InterLink : </strong>{{ card.interLink }}</div>
-      </div>
-    </div>
-    
+    <div class="text item"><strong>Subject : </strong>{{ card.subject }}</div>
+    <div class="text item"><strong>Abstract : </strong>{{ card.abstract }}</div>
+    <div class="text item"><strong>InterLink : </strong>{{ card.interLink }}</div>    
   </el-card>
 </template>
 
